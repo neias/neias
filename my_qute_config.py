@@ -39,6 +39,8 @@ c.bindings.commands['normal'] = {
     # Navigation
     '<ctrl-v>': 'scroll-page 0 0.9',
     '<alt-v>': 'scroll-page 0 -0.9',
+    '<alt-z>': 'scroll top',
+    '<alt-shift-z>': 'scroll bottom',
     # '<Backspace>': 'scroll-page 0 -0.9',
     # '<Space>': 'scroll-page 0 0.9',
     '<alt-shift-.': 'scroll-to-perc',
@@ -190,3 +192,4 @@ c.bindings.commands['insert'] = {
     '<ctrl-g>': 'leave-mode'
 
 }
+
