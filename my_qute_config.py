@@ -14,6 +14,8 @@
 config = config  # type: ConfigAPI # noqa: F821 pylint: disable=E0602,C0103
 c = c  # type: ConfigContainer # noqa: F821 pylint: disable=E0602,C0103
 
+config.load_autoconfig()
+
 # c.input.insert_mode.auto_enter = False
 # c.input.insert_mode.auto_leave = False
 c.input.insert_mode.plugins = True
@@ -33,9 +35,16 @@ c.url.searchengines = {
 
 ESC_BIND = 'clear-keychain ;; search ;; fullscreen --leave'
 
+
+# ** Media
+c.content.autoplay = False
+
+#config.bind('p', 'mode-enter caret')
+
 c.bindings.default['normal'] = {}
 # Bindings
 c.bindings.commands['normal'] = {
+    '<j>': 'mode-enter caret',
     # Navigation
     '<ctrl-v>': 'scroll-page 0 0.9',
     '<alt-v>': 'scroll-page 0 -0.9',
@@ -170,8 +179,26 @@ c.bindings.commands['hint'] = {
 
 
 c.bindings.commands['caret'] = {
+    '<ctrl-e>': 'move-to-end-of-line', 
+    '<ctrl-a>': 'move-to-start-of-line', 
+    '<ctrl-space>': 'selection-drop',
+    '<escape>': 'mode-leave',
+    '<Return>': 'yank selection', 
+    '<Space>': 'selection-toggle',
+    '<p>': 'move-to-start-of-prev-block', 
+    '<n>': 'move-to-start-of-next-block', 
+    
+    # config.bind('h', 'move-to-prev-char', mode='caret')
+    # config.bind('j', 'move-to-next-line', mode='caret')
+    # config.bind('k', 'move-to-prev-line', mode='caret')
+    # config.bind('l', 'move-to-next-char', mode='caret')
+    '<ctrl-b>': 'move-to-prev-char',
+    '<ctrl-n>': 'move-to-next-line',
+    '<ctrl-p>': 'move-to-prev-line',
+    '<ctrl-f>': 'move-to-next-char',
+
     # escape hatch
-    '<ctrl-g>': 'leave-mode',
+    '<ctrl-g>': 'selection-toggle',
 }
 
 c.bindings.commands['insert'] = {
