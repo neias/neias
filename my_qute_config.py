@@ -24,6 +24,9 @@ c.input.insert_mode.auto_load = True
 # Forward unbound keys
 c.input.forward_unbound_keys = "all"
 
+# Change home page
+c.url.start_pages = ["https://www.google.com"]
+
 c.url.searchengines = {
     'DEFAULT': 'https://www.google.com/search?q={}',
     'yt': 'https://www.youtube.com/results?search_query={}',
@@ -52,9 +55,6 @@ c.bindings.commands['normal'] = {
     '<alt-shift-z>': 'scroll bottom',
     # '<Backspace>': 'scroll-page 0 -0.9',
     # '<Space>': 'scroll-page 0 0.9',
-    '<alt-shift-.': 'scroll-to-perc',
-    '<alt-shift-.>': 'scroll-to-perc 0',
-
 
     # Commands
     '<alt-x>': 'set-cmd-text :',
@@ -67,7 +67,7 @@ c.bindings.commands['normal'] = {
     # hinting
     '<f>': 'hint all',
     '<ctrl-u><f>': 'hint all hover',
-    '<shift-f>': 'hint all tab-bg',
+    '<shift-alt-f>': 'hint all tab-bg',
     '<t>': 'hint all tab-fg',
     '<w><l>': 'hint all yank-primary',
     '<w><w>': 'yank url',
@@ -78,7 +78,7 @@ c.bindings.commands['normal'] = {
     '<shift-b>': 'back',
     '<ctrl-c><ctrl-f>': 'forward',
     '<ctrl-c><ctrl-b>': 'back',
-    'shift-h>': 'history',
+    '<shift-h>': 'history',
 
     # bookmarks
     'm': 'bookmark-add',
@@ -126,7 +126,7 @@ c.bindings.commands['normal'] = {
     '<ctrl-e>': 'fake-key <End>',
     '<ctrl-n>': 'fake-key <Down>',
     '<ctrl-p>': 'fake-key <Up>',
-    '<alt-f>': 'fake-key <Ctrl-Right>',
+    # '<alt-f>': 'fake-key <Ctrl-Right>',
     '<alt-b>': 'fake-key <Ctrl-Left>',
     '<ctrl-d>': 'fake-key <Delete>',
     '<alt-d>': 'fake-key <Ctrl-Delete>',
@@ -219,4 +219,3 @@ c.bindings.commands['insert'] = {
     '<ctrl-g>': 'leave-mode'
 
 }
-
