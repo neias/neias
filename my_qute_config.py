@@ -67,7 +67,7 @@ c.bindings.commands['normal'] = {
     # hinting
     '<f>': 'hint all',
     '<ctrl-u><f>': 'hint all hover',
-    '<shift-alt-f>': 'hint all tab-bg',
+    '<shift-t>': 'hint all tab-bg',
     '<t>': 'hint all tab-fg',
     '<w><l>': 'hint all yank-primary',
     '<w><w>': 'yank url',
