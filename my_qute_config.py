@@ -81,8 +81,8 @@ c.bindings.commands['normal'] = {
     '<shift-h>': 'history',
 
     # bookmarks
-    'm': 'bookmark-add',
-    'M': 'open qute://bookmarks',
+    '<shift-m>': 'bookmark-add',
+    '<ctrl-m>': 'open qute://bookmarks',
 
 
     # tabs
