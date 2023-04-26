@@ -29,10 +29,12 @@ c.url.start_pages = ["https://www.google.com"]
 
 c.url.searchengines = {
     'DEFAULT': 'https://www.google.com/search?q={}',
+    'du': 'https://duckduckgo.com/?q={}',
+    'bi': 'https://www.bing.com/?{}',
     'yt': 'https://www.youtube.com/results?search_query={}',
     'wk': 'https://tr.wikipedia.org/wiki/{}',
+    'ya': 'https://yandex.com.tr/search/?text={}',
     'am': 'https://www.amazon.com.tr/s?k={}',
-    'du': 'https://duckduckgo.com/?q={}',
     'hoog': 'https://hoogle.haskell.org/?hoogle={}'
 }
 
